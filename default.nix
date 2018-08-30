@@ -32,7 +32,9 @@ in with pkgs; rec {
    ln -s ${hie80}/bin/hie $out/bin/hie-8.0
    ln -s ${hie82}/bin/hie $out/bin/hie-8.2
    ln -s ${hie84}/bin/hie $out/bin/hie-8.4
+   ln -s ${hie84}/bin/hie-wrapper $out/bin/hie-wrapper
  '';
+
  hie80 = jse hie80Pkgs.haskell-ide-engine;
  hie82 = jse (import ./ghc-8.2.nix { inherit pkgs; }).haskell-ide-engine;
  hie84 = jse hie84Pkgs.haskell-ide-engine;
